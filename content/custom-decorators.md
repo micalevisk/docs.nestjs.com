@@ -1,6 +1,6 @@
-### Custom route decorators
+# Custom decorators
 
-Nest is built around a language feature called **decorators**. Decorators are a well-known concept in a lot of commonly used programming languages, but in the JavaScript world, they're still relatively new. In order to better understand how decorators work, we recommend reading [this article](https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841). Here's a simple definition:
+Nest is built around a language feature called **decorators**. Decorators are a well-known concept in a lot of commonly used programming languages, but in the JavaScript world, they're still relatively new. In order to better understand how decorators work, we recommend reading [TypeScript's handbook page](https://www.typescriptlang.org/docs/handbook/decorators.html). Here's a simple definition:
 
 <blockquote class="external">
   An ES2016 decorator is an expression which returns a function and can take a target, name and property descriptor as arguments.
@@ -8,9 +8,21 @@ Nest is built around a language feature called **decorators**. Decorators are a 
   you are trying to decorate. Decorators can be defined for either a class, a method or a property.
 </blockquote>
 
-#### Param decorators
+Has two decorator factory utilities that will help you to address several code patterns:
 
-Nest provides a set of useful **param decorators** that you can use together with the HTTP route handlers. Below is a list of the provided decorators and the plain Express (or Fastify) objects they represent
+- [Custom parameter decorators](#custom-parameter-decorators): Using `createParamDecorator`
+- [Discoverable decorators](#discoverable-decorators): Using `DiscoveryService.createDecorator`
+
+You can also compose them as you will see [here](#decorator-composition) in the end is page.
+
+## Custom parameter decorators
+
+// TODO
+...
+
+### Parameter decorators
+
+Nest provides a set of useful route parameter decorators that you can use together with the HTTP route handlers. Below is a list of the provided decorators and the plain ExpressJS/Fastify objects they represent:
 
 <table>
   <tbody>
@@ -177,7 +189,15 @@ async findOne(user) {
 
 > info **Hint** Note that `validateCustomDecorators` option must be set to true. `ValidationPipe` does not validate arguments annotated with the custom decorators by default.
 
-#### Decorator composition
+
+## Discoverable decorators
+
+// TODO
+...
+
+
+
+## Decorator composition
 
 Nest provides a helper method to compose multiple decorators. For example, suppose you want to combine all decorators related to authentication into a single decorator. This could be done with the following construction:
 
@@ -217,3 +237,4 @@ findAllUsers() {}
 This has the effect of applying all four decorators with a single declaration.
 
 > warning **Warning** The `@ApiHideProperty()` decorator from the `@nestjs/swagger` package is not composable and won't work properly with the `applyDecorators` function.
+
