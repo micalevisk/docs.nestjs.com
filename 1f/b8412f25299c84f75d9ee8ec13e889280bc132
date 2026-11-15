@@ -1,0 +1,21 @@
+src/app/shared/components/copy-markdown/copy-markdown.component.spec.ts
+  s_985969ec4c0d36::t_3c8493c1a35441 88-90,98,102,104-106,163,166-168
+src/app/shared/components/copy-markdown/copy-markdown.component.scss
+  s_985969ec4c0d36::t_b36b7e03e15ca9 78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "1fb8412f25299c84f75d9ee8ec13e889280bc132",
+  "prompts": {},
+  "sessions": {
+    "s_985969ec4c0d36": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "14282b8b-5d39-45bb-bb29-2ae32b2746f9",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Micael Levi Lima Cavalcante <micalevisk@gmail.com>"
+    }
+  }
+}
